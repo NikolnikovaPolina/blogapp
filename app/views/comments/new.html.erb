@@ -1,0 +1,23 @@
+<h1>Add a comment</h1>
+
+<%= form_with(model: [ @article, @article.comments.build ]) do |form| %>
+
+    <div>
+        <%= form.label :commenter, style: "display: block" %>
+        <%= form.text_area :commenter %>
+    </div>
+
+    <div>
+        <%= form.label :body, style: "display: block" %>
+        <%= form.text_area :body %>
+    </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+  
+
+<div>
+  <%= link_to "Back to articles", article_path(@article) %>
+</div>
